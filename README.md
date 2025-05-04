@@ -2,6 +2,8 @@
 
 A minimal Electron application with JavaScript, Electron, and Tailwind CSS.
 
+![App Sample Screenshot](./assets/image.png)
+
 ## Features
 
 - Electron app with secure preload and main/renderer separation

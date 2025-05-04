@@ -16,15 +16,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Disable the button and show loading
     submitBtn.disabled = true
     submitBtn.textContent = 'Loading...'
-    output.value = 'Loading, please wait...'
+    output.textContent = 'Loading, please wait...'
 
     try {
       const systemPrompt = systemPromptInput.value
       const userPrompt = userPromptInput.value
       const result = await get_output(systemPrompt, userPrompt)
-      output.value = result
+      output.textContent = result
     } catch (err) {
-      output.value = 'Error: ' + err.message
+      output.textContent = 'Error: ' + err.message
     }
 
     // Restore button and output placeholder

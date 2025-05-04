@@ -3,18 +3,37 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Electron</title>
-  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <title>Electron AI Playground</title>
   <meta http-equiv="Content-Security-Policy"
     content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:" />
   <link href="./assets/main.css" type="text/css" rel="stylesheet" />
 </head>
 
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-
+<body class="bg-white min-h-screen flex items-center justify-center">
+  <div class=" w-full pl-2 pr-2">
+    <h1 class="text-4xl font-extrabold text-center text-indigo-700 mb-6 drop-shadow-lg">AI Prompt Playground</h1>
+    <div class="space-y-4">
+      <label class="block text-lg font-semibold text-indigo-800" for="groqApiKey">Groq API Key</label>
+      <input id="groqApiKey" type="password" class="w-full rounded-xl border-2 border-indigo-300 focus:ring-2 focus:ring-indigo-400 p-3 bg-indigo-50 transition" placeholder="Enter your Groq API key..." autocomplete="off" />
+    </div>
+    <div class="space-y-4">
+      <label class="block text-lg font-semibold text-indigo-800" for="systemPrompt">System Prompt</label>
+      <textarea id="systemPrompt" rows="3" class="w-full rounded-xl border-2 border-indigo-300 focus:ring-2 focus:ring-indigo-400 p-3 bg-indigo-50 resize-none transition" placeholder="Enter system prompt..."></textarea>
+    </div>
+    <div class="space-y-4">
+      <label class="block text-lg font-semibold text-indigo-800" for="userPrompt">User Prompt</label>
+      <textarea id="userPrompt" rows="3" class="w-full rounded-xl border-2 border-indigo-300 focus:ring-2 focus:ring-indigo-400 p-3 bg-indigo-50 resize-none transition" placeholder="Enter user prompt..."></textarea>
+    </div>
+    <div class="flex justify-center">
+      <button id="submitBtn" class="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-full shadow-lg hover:scale-105 hover:from-purple-600 hover:to-indigo-600 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-300">
+        Submit
+      </button>
+    </div>
+    <div class="space-y-4">
+      <label class="block text-lg font-semibold text-indigo-800" for="output">Output</label>
+      <textarea id="output" rows="5" class="w-full rounded-xl border-2 border-indigo-300 bg-gray-100 p-3 resize-none text-gray-700" readonly placeholder="AI output will appear here..."></textarea>
+    </div>
+  </div>
   <script type="module" src="./src/renderer.js"></script>
 </body>
 

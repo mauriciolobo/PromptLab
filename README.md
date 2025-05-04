@@ -1,4 +1,6 @@
-# electron-app
+# PromptLab - An Electron App
+
+<img src="./assets/pirate_image.png" alt="The Pirate ScreenSHOT" width="64" height="64" />
 
 A minimal Electron application with JavaScript, Electron, and Tailwind CSS.
 
